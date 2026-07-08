@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\extra\\OneDrive\\Escritorio\\Proyecto_Progra_05\\API_Proyecto\\Proyecto_Web\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1A3A9DE0-E9C9-A6F7-1BD5-F99C0DF9AA60}|Proyecto_Web\\Proyecto_Web.csproj|c:\\users\\extra\\onedrive\\escritorio\\proyecto_progra_05\\api_proyecto\\proyecto_web\\proyecto_web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A3A9DE0-E9C9-A6F7-1BD5-F99C0DF9AA60}|Proyecto_Web\\Proyecto_Web.csproj|solutionrelative:proyecto_web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A3A9DE0-E9C9-A6F7-1BD5-F99C0DF9AA60}|Proyecto_Web\\Proyecto_Web.csproj|c:\\users\\extra\\onedrive\\escritorio\\proyecto_progra_05\\api_proyecto\\proyecto_web\\proyecto_web\\components\\pages\\listarclientes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A3A9DE0-E9C9-A6F7-1BD5-F99C0DF9AA60}|Proyecto_Web\\Proyecto_Web.csproj|solutionrelative:proyecto_web\\components\\pages\\listarclientes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A3A9DE0-E9C9-A6F7-1BD5-F99C0DF9AA60}|Proyecto_Web\\Proyecto_Web.csproj|c:\\users\\extra\\onedrive\\escritorio\\proyecto_progra_05\\api_proyecto\\proyecto_web\\proyecto_web\\components\\pages\\clienteform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A3A9DE0-E9C9-A6F7-1BD5-F99C0DF9AA60}|Proyecto_Web\\Proyecto_Web.csproj|solutionrelative:proyecto_web\\components\\pages\\clienteform.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A3A9DE0-E9C9-A6F7-1BD5-F99C0DF9AA60}|Proyecto_Web\\Proyecto_Web.csproj|c:\\users\\extra\\onedrive\\escritorio\\proyecto_progra_05\\api_proyecto\\proyecto_web\\proyecto_web\\servicios\\clientesservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A3A9DE0-E9C9-A6F7-1BD5-F99C0DF9AA60}|Proyecto_Web\\Proyecto_Web.csproj|solutionrelative:proyecto_web\\servicios\\clientesservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 1191,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\extra\\OneDrive\\Escritorio\\Proyecto_Progra_05\\API_Proyecto\\Proyecto_Web\\Proyecto_Web\\Program.cs",
+              "RelativeDocumentMoniker": "Proyecto_Web\\Program.cs",
+              "ToolTip": "C:\\Users\\extra\\OneDrive\\Escritorio\\Proyecto_Progra_05\\API_Proyecto\\Proyecto_Web\\Proyecto_Web\\Program.cs",
+              "RelativeToolTip": "Proyecto_Web\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T00:37:11.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ListarClientes.razor",
+              "DocumentMoniker": "C:\\Users\\extra\\OneDrive\\Escritorio\\Proyecto_Progra_05\\API_Proyecto\\Proyecto_Web\\Proyecto_Web\\Components\\Pages\\ListarClientes.razor",
+              "RelativeDocumentMoniker": "Proyecto_Web\\Components\\Pages\\ListarClientes.razor",
+              "ToolTip": "C:\\Users\\extra\\OneDrive\\Escritorio\\Proyecto_Progra_05\\API_Proyecto\\Proyecto_Web\\Proyecto_Web\\Components\\Pages\\ListarClientes.razor",
+              "RelativeToolTip": "Proyecto_Web\\Components\\Pages\\ListarClientes.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T01:43:21.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClientesServicio.cs",
+              "DocumentMoniker": "C:\\Users\\extra\\OneDrive\\Escritorio\\Proyecto_Progra_05\\API_Proyecto\\Proyecto_Web\\Proyecto_Web\\Servicios\\ClientesServicio.cs",
+              "RelativeDocumentMoniker": "Proyecto_Web\\Servicios\\ClientesServicio.cs",
+              "ToolTip": "C:\\Users\\extra\\OneDrive\\Escritorio\\Proyecto_Progra_05\\API_Proyecto\\Proyecto_Web\\Proyecto_Web\\Servicios\\ClientesServicio.cs",
+              "RelativeToolTip": "Proyecto_Web\\Servicios\\ClientesServicio.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAowEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T01:34:25.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClienteForm.razor",
+              "DocumentMoniker": "C:\\Users\\extra\\OneDrive\\Escritorio\\Proyecto_Progra_05\\API_Proyecto\\Proyecto_Web\\Proyecto_Web\\Components\\Pages\\ClienteForm.razor",
+              "RelativeDocumentMoniker": "Proyecto_Web\\Components\\Pages\\ClienteForm.razor",
+              "ToolTip": "C:\\Users\\extra\\OneDrive\\Escritorio\\Proyecto_Progra_05\\API_Proyecto\\Proyecto_Web\\Proyecto_Web\\Components\\Pages\\ClienteForm.razor",
+              "RelativeToolTip": "Proyecto_Web\\Components\\Pages\\ClienteForm.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-16T03:09:04.243Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

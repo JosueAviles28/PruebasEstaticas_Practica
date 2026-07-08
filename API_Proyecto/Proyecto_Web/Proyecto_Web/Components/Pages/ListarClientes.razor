@@ -1,0 +1,121 @@
+﻿@page "/listarClientes"
+@using Proyecto_Web.Modelos
+@using Proyecto_Web.Servicios
+@inject IClientesServicio ClientesServicio
+@inject NavigationManager Navigation
+
+@rendermode InteractiveServer
+
+<div class="row animated fadeIn fast">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <input type="text" class="form-control flex-grow-1" placeholder="Buscar Cliente" @bind="filtro" />
+                    <button class="btn btn-primary ms-3" @onclick="IrNuevoCliente" title="Nuevo Cliente">Nuevo Cliente</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (cargando)
+{
+    <div class="text-center mt-3">Cargando clientes...</div>
+}
+else
+{
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Clientes</h4>
+                    <h6 class="card-subtitle">Clientes registrados en la aplicación</h6>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th>Correo</th>
+                                    <th>Teléfono</th>
+                                    <th>Dirección</th>
+                                    <th class="text-nowrap">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (!ClientesFiltrados.Any())
+                                {
+                                    <tr>
+                                        <td colspan="7" class="text-center">No hay clientes que coincidan.</td>
+                                    </tr>
+                                }
+                                else
+                                {
+                                    @foreach (var c in ClientesFiltrados)
+                                    {
+                                        <tr>
+                                            <td>@c.ClienteID</td>
+                                            <td>@c.Nombre</td>
+                                            <td>@c.Apellido</td>
+                                            <td>@c.CorreoElectronico</td>
+                                            <td>@c.Telefono</td>
+                                            <td>@c.Direccion</td>
+                                            <td class="text-nowrap">
+                                                <a href="#" title="Editar"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+                                                <a href="#" title="Borrar"> <i class="fa fa-close text-danger"></i> </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="btn btn-secondary">Anteriores</button>
+                    &nbsp;
+                    <button class="btn btn-secondary">Siguiente</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private IEnumerable<ClientesModelo> clientes = Enumerable.Empty<ClientesModelo>();
+    private bool cargando = true;
+    private string filtro = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            clientes = (await ClientesServicio.ListarClientes()) ?? Enumerable.Empty<ClientesModelo>();
+        }
+        catch
+        {
+            clientes = Enumerable.Empty<ClientesModelo>();
+            // Aquí puedes añadir logging o mostrar mensaje de error
+        }
+        finally
+        {
+            cargando = false;
+            StateHasChanged();
+        }
+    }
+
+    private IEnumerable<ClientesModelo> ClientesFiltrados =>
+        string.IsNullOrWhiteSpace(filtro)
+            ? clientes
+            : clientes.Where(c =>
+                (c.Nombre ?? string.Empty).Contains(filtro, StringComparison.OrdinalIgnoreCase) ||
+                (c.Apellido ?? string.Empty).Contains(filtro, StringComparison.OrdinalIgnoreCase) ||
+                (c.CorreoElectronico ?? string.Empty).Contains(filtro, StringComparison.OrdinalIgnoreCase) ||
+                (c.Telefono ?? string.Empty).Contains(filtro, StringComparison.OrdinalIgnoreCase));
+
+    private void IrNuevoCliente()
+    {
+        // Llama al componente routable con alias "clienteForm" (ruta: /clienteForm)
+        Navigation.NavigateTo("/clienteForm");
+    }
+}
