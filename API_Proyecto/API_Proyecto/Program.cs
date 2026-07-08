@@ -13,7 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationsDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConexionSQL")));
 
-// Aquí se obtiene la clave secreta para la autenticación JWT desde la configuración de la aplicación
+// Aquï¿½ se obtiene la clave secreta para la autenticaciï¿½n JWT desde la configuraciï¿½n de la aplicaciï¿½n
 var key = builder.Configuration.GetSection("ApiSettings:Secreta").Value;
 
 builder.Services.AddScoped<ClientesRepositorio>(); // Agrega el repositorio de clientes al contenedor de servicios con un alcance de solicitud (Scoped)
@@ -21,18 +21,18 @@ builder.Services.AddScoped<LoginRepositorio>(); // Agrega el repositorio de logi
 builder.Services.AddScoped<PersonalRepositorio>(); //Agrega el repositorio de Personal al contenedor de servicios con un alcance de solicitud (Scoped)
 
 
-//Aquí se configura la Autenticación JSON Web Token - Primera parte
+//Aquï¿½ se configura la Autenticaciï¿½n JSON Web Token - Primera parte
 builder.Services.AddAuthentication(x =>
 {
-    // Establece el esquema de autenticación por defecto para la autenticación
-    // basada en JWT como el esquema de autenticación por defecto.
+    // Establece el esquema de autenticaciï¿½n por defecto para la autenticaciï¿½n
+    // basada en JWT como el esquema de autenticaciï¿½n por defecto.
     x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
 
-    // Establece el esquema de desafío por defecto para la autenticación
-    // basada en JWT como el esquema de desafío por defecto.
+    // Establece el esquema de desafï¿½o por defecto para la autenticaciï¿½n
+    // basada en JWT como el esquema de desafï¿½o por defecto.
     x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 
-    // Agrega la autenticación JWT Bearer al servicio de autenticación.
+    // Agrega la autenticaciï¿½n JWT Bearer al servicio de autenticaciï¿½n.
 }).AddJwtBearer(x =>
 {
     // Indica si se debe validar el origen HTTPS del token.
@@ -40,7 +40,7 @@ builder.Services.AddAuthentication(x =>
     // Indica si el token recibido debe ser almacenado.
     x.SaveToken = true;
 
-    // Especifica los parámetros para la validación del token.
+    // Especifica los parï¿½metros para la validaciï¿½n del token.
     x.TokenValidationParameters = new TokenValidationParameters
     {
         // Indica si se debe validar la clave de firma del emisor del token.
@@ -63,20 +63,20 @@ builder.Services.AddSwaggerGen();
 
 
 
-//Aquí se configura la autenticación y autorización - segunda parte
+//Aquï¿½ se configura la autenticaciï¿½n y autorizaciï¿½n - segunda parte
 builder.Services.AddSwaggerGen(options =>
 {
-    // Agrega una definición de seguridad para el esquema Bearer
+    // Agrega una definiciï¿½n de seguridad para el esquema Bearer
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
-        // Descripción del esquema de seguridad Bearer
+        // Descripciï¿½n del esquema de seguridad Bearer
         Description =
-        "Autenticación JWT usando el esquema Bearer. \r\n\r\n " +
+        "Autenticaciï¿½n JWT usando el esquema Bearer. \r\n\r\n " +
         "Ingresa la palabra 'Bearer' seguida de un [espacio] y despues su token en el campo de abajo \r\n\r\n" +
         "Ejemplo: \"Bearer tkdknkdllskd\"",
-        // Nombre del esquema de seguridad en la solicitud de autorización
+        // Nombre del esquema de seguridad en la solicitud de autorizaciï¿½n
         Name = "Authorization",
-        // Ubicación del token en la solicitud (en el encabezado)
+        // Ubicaciï¿½n del token en la solicitud (en el encabezado)
         In = ParameterLocation.Header,
         // Tipo de esquema de seguridad (Bearer)
         Scheme = "Bearer"
@@ -97,9 +97,9 @@ builder.Services.AddSwaggerGen(options =>
                             },
 				// Especifica el tipo de esquema de seguridad (oauth2)
 				Scheme = "oauth2",
-				// Nombre del esquema de seguridad en la solicitud de autorización
+				// Nombre del esquema de seguridad en la solicitud de autorizaciï¿½n
 				Name = "Bearer",
-				 // Ubicación del token en la solicitud (en el encabezado)
+				 // Ubicaciï¿½n del token en la solicitud (en el encabezado)
 				In = ParameterLocation.Header
             },
             new List<string>()
@@ -108,10 +108,12 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 
-// Configuración de CORS para permitir solicitudes desde cualquier origen, con cualquier método y cualquier encabezado
+// Configuraciï¿½n de CORS para permitir solicitudes desde cualquier origen, con cualquier mï¿½todo y cualquier encabezado
 builder.Services.AddCors(p => p.AddPolicy("PolicyCors", build =>
         {
-            build.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+            build.WithOrigins("https://misitio.com")
+                .AllowAnyMethod()
+                .AllowAnyHeader();
         }
      )
 );
